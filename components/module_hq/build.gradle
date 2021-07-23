@@ -1,0 +1,67 @@
+import com.gyzq.depend.plugin.BuildConfig
+
+if (BuildConfig.isDebugModule){
+    apply plugin: 'com.android.application'
+}else{
+    apply plugin: 'com.android.library'
+}
+
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion BuildConfig.compileSdkVersion
+    buildToolsVersion BuildConfig.buildToolsVersion
+
+    defaultConfig {
+        if (BuildConfig.isDebugModule){
+            applicationId "guoyuan.szkingdom.android.module_hq"
+
+            multiDexEnabled true
+        }
+        minSdkVersion BuildConfig.minSdkVersion
+        targetSdkVersion BuildConfig.targetSdkVersion
+        versionCode BuildConfig.versionCode
+        versionName BuildConfig.versionName
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    resourcePrefix "hq_"
+    sourceSets {
+        if (BuildConfig.isDebugModule){
+            main.manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+//            main.java.srcDirs += 'src/main/debug'
+//            main.res.srcDirs += 'src/main/debug'
+        }else {
+            main.manifest.srcFile 'src/main/AndroidManifest.xml'
+        }
+    }
+//    resourcePrefix "hq_"
+//
+//    sourceSets {
+//        if (isDebugModule.toBoolean()) {
+//            main.manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+////            main.java.srcDirs += 'src/main/debug'
+////            main.res.srcDirs += 'src/main/debug'
+//        } else {
+//            main.manifest.srcFile 'src/main/release/AndroidManifest.xml'
+//        }
+//    }
+}
+
+dependencies {
+    api project(path: ':lib_components:lib_common')
+}

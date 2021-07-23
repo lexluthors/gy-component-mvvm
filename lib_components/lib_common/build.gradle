@@ -1,0 +1,102 @@
+import com.gyzq.depend.plugin.*
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    api AndroidX.coreKtx
+    api AndroidX.appcompat
+    api AndroidX.constraintLayout
+    api AndroidX.ActivityKtx
+    api AndroidX.FragmentKtx
+    api AndroidX.MultiDex
+
+    api Depend.material
+
+    api Kt.stdlib
+    api Kt.CoroutinesCore
+    api Kt.CoroutinesAndroid
+
+    api JetPack.ViewModel
+    api JetPack.ViewModelSavedState
+    api JetPack.LiveData
+    api JetPack.Lifecycle
+    api JetPack.HiltCore
+
+    api GitHub.Gson
+    api GitHub.MMKV
+    api GitHub.AutoSize
+    api GitHub.RecyclerViewAdapter
+//    api GitHub.StatusBar
+    api GitHub.EventBus
+    api GitHub.PermissionX
+    api GitHub.AutoService
+    api GitHub.OkHttp
+    api GitHub.OkHttpInterceptorLogging
+    api GitHub.Retrofit
+    api GitHub.RetrofitConverterGson
+    api GitHub.Coil
+    api GitHub.CoilGIF
+    api GitHub.CoilSVG
+    api GitHub.CoilVideo
+
+//    api GitHub.ARoute
+//    kapt GitHub.ARouteCompiler
+    kapt GitHub.EventBusAPT
+    kapt GitHub.AutoServiceAnnotations
+    kapt JetPack.HiltApt
+    kapt JetPack.HiltAndroidx
+    kapt JetPack.LifecycleCompilerAPT
+
+    api AndroidX.lifecycleExtensions
+    api AndroidX.lifecycleRuntime
+
+    api AndroidX.vectorDrawable
+    api AndroidX.lifecycleLivedataKtx
+    api AndroidX.lifecycleViewModelKtx
+    api AndroidX.navigationFragmentKtx
+    api AndroidX.navigationUiKtx
+}
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
