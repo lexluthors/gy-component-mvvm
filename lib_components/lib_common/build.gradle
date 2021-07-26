@@ -6,6 +6,7 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
 }
+apply plugin: 'kotlin-android'
 
 android {
 
@@ -23,6 +24,13 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//
+//        configurations.all {
+//            resolutionStrategy {
+//                // 显示冲突的依赖库版本信息
+//                failOnVersionConflict()
+//            }
+//        }
     }
 
     buildTypes {
@@ -41,31 +49,25 @@ android {
 }
 
 dependencies {
-
     api AndroidX.coreKtx
     api AndroidX.appcompat
     api AndroidX.constraintLayout
     api AndroidX.ActivityKtx
     api AndroidX.FragmentKtx
     api AndroidX.MultiDex
-
     api Depend.material
-
     api Kt.stdlib
     api Kt.CoroutinesCore
     api Kt.CoroutinesAndroid
-
     api JetPack.ViewModel
     api JetPack.ViewModelSavedState
     api JetPack.LiveData
     api JetPack.Lifecycle
     api JetPack.HiltCore
-
     api GitHub.Gson
     api GitHub.MMKV
     api GitHub.AutoSize
     api GitHub.RecyclerViewAdapter
-//    api GitHub.StatusBar
     api GitHub.EventBus
     api GitHub.PermissionX
     api GitHub.AutoService
@@ -77,26 +79,29 @@ dependencies {
     api GitHub.CoilGIF
     api GitHub.CoilSVG
     api GitHub.CoilVideo
-
-//    api GitHub.ARoute
-//    kapt GitHub.ARouteCompiler
     kapt GitHub.EventBusAPT
     kapt GitHub.AutoServiceAnnotations
     kapt JetPack.HiltApt
     kapt JetPack.HiltAndroidx
     kapt JetPack.LifecycleCompilerAPT
-
     api AndroidX.lifecycleExtensions
     api AndroidX.lifecycleRuntime
-
     api AndroidX.vectorDrawable
     api AndroidX.lifecycleLivedataKtx
     api AndroidX.lifecycleViewModelKtx
     api AndroidX.navigationFragmentKtx
     api AndroidX.navigationUiKtx
+    //    api GitHub.StatusBar
+//    api GitHub.ARoute
+//    kapt GitHub.ARouteCompiler
+//    implementation "androidx.core:core-ktx:+"
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 kapt {
     arguments {
         arg("AROUTER_MODULE_NAME", project.getName())
     }
+}
+repositories {
+    mavenCentral()
 }

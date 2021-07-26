@@ -47,4 +47,5 @@ dependencies {
     implementation AndroidX.navigationFragmentKtx
     implementation AndroidX.navigationUiKtx
     api project(path: ':components:module_home')
+    api project(path: ':components:module_hq')
 }
