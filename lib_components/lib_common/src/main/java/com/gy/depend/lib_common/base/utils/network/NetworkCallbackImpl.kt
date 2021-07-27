@@ -1,4 +1,4 @@
-
+package com.gy.depend.lib_common.base.utils.network
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities

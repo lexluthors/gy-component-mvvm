@@ -1,4 +1,4 @@
-
+package com.gy.depend.lib_common.base.utils
 import android.content.Context
 import com.tencent.mmkv.MMKV
 

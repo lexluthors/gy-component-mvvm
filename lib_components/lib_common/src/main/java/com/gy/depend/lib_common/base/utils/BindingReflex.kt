@@ -1,3 +1,4 @@
+package com.gy.depend.lib_common.base.utils
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment

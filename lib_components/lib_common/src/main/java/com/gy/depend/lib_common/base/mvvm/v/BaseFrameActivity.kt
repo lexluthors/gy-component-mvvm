@@ -1,7 +1,12 @@
-
+package com.gy.depend.lib_common.base.mvvm.v
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
+import com.gy.depend.lib_common.base.mvvm.vm.BaseViewModel
+import com.gy.depend.lib_common.base.utils.*
+import com.gy.depend.lib_common.base.utils.network.AutoRegisterNetListener
+import com.gy.depend.lib_common.base.utils.network.NetworkStateChangeListener
+
 //import com.alibaba.android.arouter.launcher.ARouter
 
 

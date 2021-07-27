@@ -1,10 +1,16 @@
-
+package com.gy.depend.lib_common.base.mvvm.v
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.gy.depend.lib_common.base.mvvm.vm.BaseViewModel
+import com.gy.depend.lib_common.base.utils.BindingReflex
+import com.gy.depend.lib_common.base.utils.EventBusRegister
+import com.gy.depend.lib_common.base.utils.EventBusUtils
+import com.gy.depend.lib_common.base.utils.ViewRecreateHelper
+
 //import com.alibaba.android.arouter.launcher.ARouter
 
 

@@ -1,4 +1,4 @@
-
+package com.gy.depend.lib_common.base.mvvm.vm
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

@@ -1,8 +1,9 @@
-
+package com.gy.depend.lib_common.base.app
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import android.util.Log
+import com.gy.depend.lib_common.base.utils.ActivityStackManager
 
 /**
  * @author: liujie

@@ -1,5 +1,5 @@
 package guoyuan.szkingdom.android.module_home
-
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.gyzq.module_hq.R

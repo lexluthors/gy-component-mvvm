@@ -1,6 +1,7 @@
-
+package com.gy.depend.lib_common.base.mvvm.vm
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.gy.depend.lib_common.base.utils.StateLayoutEnum
 import kotlin.jvm.Throws
 
 

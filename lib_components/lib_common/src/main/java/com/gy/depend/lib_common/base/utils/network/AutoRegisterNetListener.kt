@@ -1,4 +1,4 @@
-
+package com.gy.depend.lib_common.base.utils.network
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent

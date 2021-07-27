@@ -1,4 +1,4 @@
-
+package com.gy.depend.lib_common.base.mvvm.m
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector

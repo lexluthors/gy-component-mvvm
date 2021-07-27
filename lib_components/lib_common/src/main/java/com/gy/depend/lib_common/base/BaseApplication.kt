@@ -1,10 +1,10 @@
 package com.gy.depend.lib_common.base
-import ActivityLifecycleCallbacksImpl
-import LoadModuleProxy
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
 import androidx.multidex.MultiDexApplication
+import com.gy.depend.lib_common.base.app.ActivityLifecycleCallbacksImpl
+import com.gy.depend.lib_common.base.app.LoadModuleProxy
 import kotlinx.coroutines.*
 import kotlin.system.measureTimeMillis
 

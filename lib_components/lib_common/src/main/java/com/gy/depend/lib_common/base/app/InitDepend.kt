@@ -1,4 +1,4 @@
-
+package com.gy.depend.lib_common.base.app
 /**
  * @author: liujie
  * @date: 2021/7/14

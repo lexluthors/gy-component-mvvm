@@ -1,4 +1,4 @@
-
+package com.gy.depend.lib_common.base.utils
 import android.app.ActivityManager
 import android.content.Context
 import android.content.pm.PackageManager

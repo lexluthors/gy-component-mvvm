@@ -1,4 +1,4 @@
-
+package com.gy.depend.lib_common.base.utils
 import android.os.Build
 import android.util.Log
 import android.widget.Toast

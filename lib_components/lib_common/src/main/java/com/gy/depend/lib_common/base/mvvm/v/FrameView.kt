@@ -1,4 +1,4 @@
-
+package com.gy.depend.lib_common.base.mvvm.v
 import androidx.viewbinding.ViewBinding
 
 

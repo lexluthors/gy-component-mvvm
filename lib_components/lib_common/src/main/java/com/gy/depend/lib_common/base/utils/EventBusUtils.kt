@@ -1,4 +1,4 @@
-
+package com.gy.depend.lib_common.base.utils
 import org.greenrobot.eventbus.EventBus
 
 /**

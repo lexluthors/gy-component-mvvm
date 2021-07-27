@@ -1,6 +1,7 @@
-
+package com.gy.depend.lib_common.base.app
 import android.app.Application
 import android.content.Context
+import com.gy.depend.lib_common.base.app.InitDepend
 
 /**
  * @author: liujie
