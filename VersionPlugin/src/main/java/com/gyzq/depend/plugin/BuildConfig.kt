@@ -14,5 +14,5 @@ object BuildConfig {
     val versionName = "1.0.0"
 
 
-    val isDebugModule = false
+    val isDebugModule = true
 }
