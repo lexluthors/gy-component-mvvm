@@ -16,7 +16,6 @@ android {
 
         multiDexEnabled true
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -44,6 +43,6 @@ dependencies {
 //    implementation AndroidX.lifecycleViewModelKtx
 //    implementation AndroidX.navigationFragmentKtx
 //    implementation AndroidX.navigationUiKtx
-    api project(path: ':components:module_home')
-    api project(path: ':components:module_hq')
+    implementation project(path: ':components:module_home')
+    implementation project(path: ':components:module_hq')
 }

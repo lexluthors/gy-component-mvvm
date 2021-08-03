@@ -1,23 +1,5 @@
-//apply from: '../../base_module.gradle'
-//
-//android {
-//    resourcePrefix "home_"
-//}
-//
-//dependencies {
-//    implementation 'androidx.appcompat:appcompat:1.2.0'
-//    implementation 'com.google.android.material:material:1.2.1'
-//    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-//
-//    implementation 'com.gyzq.skin:skinEngine:1.0.0'
-//}
-
 import com.gyzq.depend.plugin.BuildConfig
 
-//plugins {
-//    id 'com.android.application'
-//    id 'kotlin-android'
-//}
 if (BuildConfig.isDebugModule){
     apply plugin: 'com.android.application'
 }else{
@@ -59,6 +41,9 @@ android {
         jvmTarget = '1.8'
     }
 
+    buildFeatures {
+        viewBinding true
+    }
 
     resourcePrefix "home_"
     sourceSets {

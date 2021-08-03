@@ -1,0 +1,60 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin'}
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+//        maven { url 'http://60.174.200.97:28081/nexus/content/groups/gy-public/' }
+
+    }
+    dependencies {
+        // 因为使用的 Kotlin 需要需要添加 Kotlin 插件
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'java-gradle-plugin'
+
+repositories {
+    // 需要添加 jcenter 否则会提示找不到 gradlePlugin
+    google()
+    mavenCentral()
+    maven { url 'https://maven.aliyun.com/repository/gradle-plugin'}
+    maven { url 'https://maven.aliyun.com/repository/jcenter' }
+    maven { url 'https://maven.aliyun.com/repository/google' }
+    maven { url 'https://maven.aliyun.com/repository/central' }
+//    maven { url 'http://60.174.200.97:28081/nexus/content/groups/gy-public/' }
+
+
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21"
+//    implementation "org.jetbrains.kotlin:kotlin-reflect:1.5.21"
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+gradlePlugin {
+    plugins {
+        version {
+            // 在 app 模块需要通过 id 引用这个插件
+            id = 'com.gyzq.depend.plugin'
+            // 实现这个插件的类的路径
+            implementationClass = 'com.gyzq.depend.plugin.VersionPlugin'
+        }
+    }
+}

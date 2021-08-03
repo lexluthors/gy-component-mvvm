@@ -38,6 +38,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 
     resourcePrefix "hq_"
     sourceSets {
@@ -49,17 +52,6 @@ android {
             main.manifest.srcFile 'src/main/AndroidManifest.xml'
         }
     }
-//    resourcePrefix "hq_"
-//
-//    sourceSets {
-//        if (isDebugModule.toBoolean()) {
-//            main.manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-////            main.java.srcDirs += 'src/main/debug'
-////            main.res.srcDirs += 'src/main/debug'
-//        } else {
-//            main.manifest.srcFile 'src/main/release/AndroidManifest.xml'
-//        }
-//    }
 }
 
 dependencies {
