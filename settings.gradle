@@ -1,5 +1,5 @@
 rootProject.name = "gy-component-mvvm"
-includeBuild("VersionPlugin")
+includeBuild("../VersionPlugin")
 include ':app'
 include ':components:module_home'
 include ':components:module_hq'
